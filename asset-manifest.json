@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Ehitustoo/static/css/main.bfc1aa58.chunk.css",
+    "main.js": "/Ehitustoo/static/js/main.25229cee.chunk.js",
+    "main.js.map": "/Ehitustoo/static/js/main.25229cee.chunk.js.map",
+    "runtime-main.js": "/Ehitustoo/static/js/runtime-main.ed256c71.js",
+    "runtime-main.js.map": "/Ehitustoo/static/js/runtime-main.ed256c71.js.map",
+    "static/css/2.ab18fb39.chunk.css": "/Ehitustoo/static/css/2.ab18fb39.chunk.css",
+    "static/js/2.10154be7.chunk.js": "/Ehitustoo/static/js/2.10154be7.chunk.js",
+    "static/js/2.10154be7.chunk.js.map": "/Ehitustoo/static/js/2.10154be7.chunk.js.map",
+    "static/js/3.d7f901a0.chunk.js": "/Ehitustoo/static/js/3.d7f901a0.chunk.js",
+    "static/js/3.d7f901a0.chunk.js.map": "/Ehitustoo/static/js/3.d7f901a0.chunk.js.map",
+    "index.html": "/Ehitustoo/index.html",
+    "static/css/2.ab18fb39.chunk.css.map": "/Ehitustoo/static/css/2.ab18fb39.chunk.css.map",
+    "static/css/main.bfc1aa58.chunk.css.map": "/Ehitustoo/static/css/main.bfc1aa58.chunk.css.map",
+    "static/js/2.10154be7.chunk.js.LICENSE.txt": "/Ehitustoo/static/js/2.10154be7.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/Ehitustoo/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/media/neat-tiling-work.88cf1d90.png": "/Ehitustoo/static/media/neat-tiling-work.88cf1d90.png",
+    "static/media/nucleo.css": "/Ehitustoo/static/media/nucleo-icons.d6a66724.ttf",
+    "static/media/portait.79bd0a43.jpg": "/Ehitustoo/static/media/portait.79bd0a43.jpg",
+    "static/media/vannituba_1.fd62479f.jpg": "/Ehitustoo/static/media/vannituba_1.fd62479f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed256c71.js",
+    "static/css/2.ab18fb39.chunk.css",
+    "static/js/2.10154be7.chunk.js",
+    "static/css/main.bfc1aa58.chunk.css",
+    "static/js/main.25229cee.chunk.js"
+  ]
+}
