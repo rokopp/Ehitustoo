@@ -17,22 +17,14 @@
 */
 /*eslint-disable*/
 import React from "react";
-import { Link } from "react-router-dom";
-// reactstrap components
+
 import {
-  Button,
-  Card,
-  CardImg,
-  NavItem,
-  NavLink,
-  Nav,
   Container,
   Row,
   Col,
-  UncontrolledTooltip
 } from "reactstrap";
 
-class CardsFooter extends React.Component {
+class BasicFooter extends React.Component {
   render() {
     return (
       <>
@@ -44,8 +36,8 @@ class CardsFooter extends React.Component {
                 <div className="copyright">
                   © {new Date().getFullYear()}{" "}
                   <a
-                    href="https://www.creative-tim.com?ref=adsr-footer"
-                    target="_blank"
+                    // href="https://www.creative-tim.com?ref=adsr-footer"
+                    // target="_blank"
                   >
                     Remlak Ehitus OÜ
                   </a>
@@ -60,4 +52,4 @@ class CardsFooter extends React.Component {
   }
 }
 
-export default CardsFooter;
+export default BasicFooter;

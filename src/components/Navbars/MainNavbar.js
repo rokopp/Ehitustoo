@@ -21,13 +21,7 @@ import { Link } from "react-router-dom";
 import Headroom from "headroom.js";
 // reactstrap components
 import {
-  Button,
   UncontrolledCollapse,
-  DropdownMenu,
-  DropdownItem,
-  DropdownToggle,
-  UncontrolledDropdown,
-  Media,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -36,10 +30,11 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
 } from "reactstrap";
+import Scrollchor from 'react-scrollchor';
 
-class DemoNavbar extends React.Component {
+
+class MainNavbar extends React.Component {
   componentDidMount() {
     let headroom = new Headroom(document.getElementById("navbar-main"));
     // initialise
@@ -107,52 +102,16 @@ class DemoNavbar extends React.Component {
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
                   <NavItem>
-                    <NavLink
-                        className="nav-link-icon"
-                        href="#avaleht"
-                        id="tooltip112445449"
-                    >
-                      {/*<i className="fa fa-github" />*/}
-                      <span className="nav-link-inner--text ml-2">
-                        Avaleht
-                      </span>
-                    </NavLink>
+                    <Scrollchor animate={{offset: 20, duration: 600}} to="" className="nav-link">Avaleht</Scrollchor>
                   </NavItem>
                   <NavItem>
-                    <NavLink
-                        className="nav-link-icon"
-                        href="#tehtudtood"
-                        id="tooltip112445449"
-                    >
-                      {/*<i className="fa fa-github" />*/}
-                      <span className="nav-link-inner--text ml-2">
-                        Tehtud tööd
-                      </span>
-                    </NavLink>
+                    <Scrollchor animate={{offset: 20, duration: 600}} to="#tehtudtood" className="nav-link">Tehtud tööd</Scrollchor>
                   </NavItem>
                   <NavItem>
-                    <NavLink
-                        className="nav-link-icon"
-                        href="#minust"
-                        id="tooltip112445449"
-                    >
-                      {/*<i className="fa fa-github" />*/}
-                      <span className="nav-link-inner--text ml-2">
-                        Minust
-                      </span>
-                    </NavLink>
+                    <Scrollchor animate={{offset: 20, duration: 600}} to="#minust" className="nav-link">Minust</Scrollchor>
                   </NavItem>
                   <NavItem>
-                    <NavLink
-                        className="nav-link-icon"
-                        href="#kontakt"
-                        id="tooltip112445449"
-                    >
-                      {/*<i className="fa fa-github" />*/}
-                      <span className="nav-link-inner--text ml-2">
-                        Kontakt
-                      </span>
-                    </NavLink>
+                    <Scrollchor animate={{offset: 150, duration: 600}} to="#kontakt" className="nav-link">Kontakt</Scrollchor>
                   </NavItem>
                 </Nav>
               </UncontrolledCollapse>
@@ -164,4 +123,4 @@ class DemoNavbar extends React.Component {
   }
 }
 
-export default DemoNavbar;
+export default MainNavbar;

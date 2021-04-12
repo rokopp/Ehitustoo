@@ -37,13 +37,10 @@ import {
 } from "reactstrap";
 
 // core components
-import DemoNavbar from "./Navbars/DemoNavbar.js";
-import CardsFooter from "./Footers/CardsFooter";
-import Modals from "./Modal/modal";
-import Carousel from "./Carousel/Carousel";
-
-// index page sections
-// import Download from "../IndexSections/Download.js";
+import MainNavbar from "./Navbars/MainNavbar.js";
+import DoneWorkGallery from "./DoneWorkGallery/DoneWorkGallery";
+import portrait from "../assets/portrait/portait.jpg";
+import BasicFooter from "./Footers/CardsFooter";
 
 class Landing extends React.Component {
     state = {};
@@ -55,34 +52,17 @@ class Landing extends React.Component {
     render() {
         return (
             <>
-                <DemoNavbar />
+                <MainNavbar />
                 <main ref="main">
                     <div className="position-relative">
-                        <section className="section section-lg section-shaped pb-250">
-                            <div className="shape shape-style-1 shape-default">
-                                <span />
-                                <span />
-                                <span />
-                                <span />
-                                <span />
-                                <span />
-                                <span />
-                                <span />
-                                <span />
-                            </div>
-                            <Container className="py-lg-md d-flex">
+                        <section className="section section-lg bg-gradient-default pb-300">
+                            <Container className="py-lg-md d-flex pt-200">
                                 <div className="col px-0">
                                     <Row>
                                         <Col lg="12">
                                             <h1 className="display-3 text-white">
                                                 Remlak Ehitus OÜ{" "}
-                                                <span>completed with examples</span>
                                             </h1>
-                                            <p className="lead text-white">
-                                                The design system comes with four pre-built pages to
-                                                help you get started faster. You can change the text and
-                                                images and you're good to go.
-                                            </p>
                                         </Col>
                                     </Row>
                                 </div>
@@ -104,95 +84,29 @@ class Landing extends React.Component {
                                 </svg>
                             </div>
                         </section>
-                        {/* 1st Hero Variation */}
                     </div>
-                    <section className="section section-lg">
-                        <Container>
-                            <Row className="row-grid align-items-center">
-                                <Col className="order-md-2" md="6">
-                                    <img
-                                        alt="..."
-                                        className="img-fluid floating"
-                                        // src={require("assets/img/theme/promo-1.png")}
-                                    />
+                    {/*Done Work*/}
+                    <section className="section section-lg" id='tehtudtood'>
+                        <Container className="pt-lg">
+                            <Row className="text-center justify-content-center">
+                                <Col lg="10">
+                                    <h2 className="display-3">Tehtud tööd</h2>
                                 </Col>
-                                <Col className="order-md-1" md="6">
-                                    <div className="pr-md-5">
-                                        <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
-                                            <i className="ni ni-settings-gear-65" />
-                                        </div>
-                                        <h3>Awesome features</h3>
-                                        <Modals/>
-                                        <Carousel/>
-                                        <p>
-                                            The kit comes with three pre-built pages to help you get
-                                            started faster. You can change the text and images and
-                                            you're good to go.
-                                        </p>
-                                        <ul className="list-unstyled mt-5">
-                                            <li className="py-2">
-                                                <div className="d-flex align-items-center">
-                                                    <div>
-                                                        <Badge
-                                                            className="badge-circle mr-3"
-                                                            color="success"
-                                                        >
-                                                            <i className="ni ni-settings-gear-65" />
-                                                        </Badge>
-                                                    </div>
-                                                    <div>
-                                                        <h6 className="mb-0">
-                                                            Carefully crafted components
-                                                        </h6>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li className="py-2">
-                                                <div className="d-flex align-items-center">
-                                                    <div>
-                                                        <Badge
-                                                            className="badge-circle mr-3"
-                                                            color="success"
-                                                        >
-                                                            <i className="ni ni-html5" />
-                                                        </Badge>
-                                                    </div>
-                                                    <div>
-                                                        <h6 className="mb-0">Amazing page examples</h6>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li className="py-2">
-                                                <div className="d-flex align-items-center">
-                                                    <div>
-                                                        <Badge
-                                                            className="badge-circle mr-3"
-                                                            color="success"
-                                                        >
-                                                            <i className="ni ni-satisfied" />
-                                                        </Badge>
-                                                    </div>
-                                                    <div>
-                                                        <h6 className="mb-0">
-                                                            Super friendly support team
-                                                        </h6>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <Col>
+                                    <DoneWorkGallery/>
                                 </Col>
                             </Row>
                         </Container>
                     </section>
-                    <section className="section bg-secondary">
+                    {/*About Me*/}
+                    <section className="section section-lg" id='minust'>
                         <Container>
                             <Row className="row-grid align-items-center">
                                 <Col md="6">
                                     <Card className="bg-default shadow border-0">
                                         <CardImg
                                             alt="..."
-                                            // src={require("assets/img/theme/img-1-1200x1000.jpg")}
+                                            src={portrait}
                                             top
                                         />
                                         <blockquote className="card-blockquote">
@@ -213,93 +127,38 @@ class Landing extends React.Component {
                                                 />
                                             </svg>
                                             <h4 className="display-3 font-weight-bold text-white">
-                                                Design System
+                                                Kalmer Koppa
                                             </h4>
-                                            <p className="lead text-italic text-white">
-                                                The Arctic Ocean freezes every winter and much of the
-                                                sea-ice then thaws every summer, and that process will
-                                                continue whatever happens.
-                                            </p>
+                                            {/*<p className="lead text-italic text-white">*/}
+                                            {/*    The Arctic Ocean freezes every winter and much of the*/}
+                                            {/*    sea-ice then thaws every summer, and that process will*/}
+                                            {/*    continue whatever happens.*/}
+                                            {/*</p>*/}
                                         </blockquote>
                                     </Card>
                                 </Col>
                                 <Col md="6">
                                     <div className="pl-md-5">
-                                        <div className="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
-                                            <i className="ni ni-settings" />
-                                        </div>
-                                        <h3>Our customers</h3>
+                                        <h3>Minust</h3>
                                         <p className="lead">
-                                            Don't let your uses guess by attaching tooltips and
-                                            popoves to any element. Just make sure you enable them
-                                            first via JavaScript.
+                                            Plaatimis kogemust üle 30 aasta
                                         </p>
-                                        <p>
-                                            The kit comes with three pre-built pages to help you get
-                                            started faster. You can change the text and images and
-                                            you're good to go.
-                                        </p>
-                                        <p>
-                                            The kit comes with three pre-built pages to help you get
-                                            started faster. You can change the text and images and
-                                            you're good to go.
-                                        </p>
-                                        <a
-                                            className="font-weight-bold text-warning mt-5"
-                                            href="#pablo"
-                                            onClick={e => e.preventDefault()}
-                                        >
-                                            A beautiful UI Kit for impactful websites
-                                        </a>
+                                        {/*<p>*/}
+                                        {/*    The kit comes with three pre-built pages to help you get*/}
+                                        {/*    started faster. You can change the text and images and*/}
+                                        {/*    you're good to go.*/}
+                                        {/*</p>*/}
+                                        {/*<p>*/}
+                                        {/*    The kit comes with three pre-built pages to help you get*/}
+                                        {/*    started faster. You can change the text and images and*/}
+                                        {/*    you're good to go.*/}
+                                        {/*</p>*/}
                                     </div>
                                 </Col>
                             </Row>
                         </Container>
                     </section>
-                    <section className="section section-lg">
-                        <Container id='minust'>
-                            <Row className="justify-content-center text-center mb-lg">
-                                <Col lg="8">
-                                    <h2 className="display-3">Minust</h2>
-                                    <p className="lead text-muted">
-                                        According to the National Oceanic and Atmospheric
-                                        Administration, Ted, Scambos, NSIDClead scentist, puts the
-                                        potentially record maximum.
-                                    </p>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col className="mb-5 mb-lg-0" lg="12" md="10">
-                                    <div className="px-4">
-                                        <img
-                                            alt="..."
-                                            className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                                            // src={require("assets/img/theme/team-2-800x800.jpg")}
-                                            style={{ width: "200px" }}
-                                        />
-                                        <div className="pt-4 text-center">
-                                            <h5 className="title">
-                                                <span className="d-block mb-1">Kalmer Koppa</span>
-                                                <small className="h6 text-muted">
-                                                    Plaatija
-                                                </small>
-                                            </h5>
-                                            <div className="mt-3">
-                                                <Button
-                                                    className="btn-icon-only rounded-circle ml-1"
-                                                    color="primary"
-                                                    href="#pablo"
-                                                    onClick={e => e.preventDefault()}
-                                                >
-                                                    <i className="fa fa-facebook" />
-                                                </Button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Container>
-                    </section>
+                    {/*Contact*/}
                     <section className="section section-lg bg-gradient-default" id='kontakt'>
                         <Container className="pt-lg pb-300">
                             <Row className="text-center justify-content-center">
@@ -308,23 +167,8 @@ class Landing extends React.Component {
                                 </Col>
                             </Row>
                         </Container>
-                        {/* SVG separator */}
-                        <div className="separator separator-bottom separator-skew zindex-100">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                preserveAspectRatio="none"
-                                version="1.1"
-                                viewBox="0 0 2560 100"
-                                x="0"
-                                y="0"
-                            >
-                                <polygon
-                                    className="fill-white"
-                                    points="2560 0 2560 100 0 100"
-                                />
-                            </svg>
-                        </div>
                     </section>
+                    {/*Email Me*/}
                     <section className="section section-lg pt-lg-0 section-contact-us">
                         <Container>
                             <Row className="justify-content-center mt--300">
@@ -401,7 +245,7 @@ class Landing extends React.Component {
                         </Container>
                     </section>
                 </main>
-                <CardsFooter />
+                <BasicFooter />
             </>
         );
     }
